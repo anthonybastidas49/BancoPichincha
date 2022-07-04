@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BancoPichinchaModelStoreContainer" CdmEntityContainer="BancoPichinchaEntities1">
+    <EntitySetMapping Name="ACCOUNT">
+      <EntityTypeMapping TypeName="BancoPichinchaModel.ACCOUNT">
+        <MappingFragment StoreEntitySet="ACCOUNT">
+          <ScalarProperty Name="ID_ACCOUNT" ColumnName="ID_ACCOUNT" />
+          <ScalarProperty Name="ID_CUSTOMER" ColumnName="ID_CUSTOMER" />
+          <ScalarProperty Name="NUMBER" ColumnName="NUMBER" />
+          <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+          <ScalarProperty Name="INITIAL_BALANCE" ColumnName="INITIAL_BALANCE" />
+          <ScalarProperty Name="STATE" ColumnName="STATE" />
+          <ScalarProperty Name="LIMIT" ColumnName="LIMIT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CUSTOMER">
+      <EntityTypeMapping TypeName="BancoPichinchaModel.CUSTOMER">
+        <MappingFragment StoreEntitySet="CUSTOMER">
+          <ScalarProperty Name="ID_CUSTOMER" ColumnName="ID_CUSTOMER" />
+          <ScalarProperty Name="ID_PERSON" ColumnName="ID_PERSON" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+          <ScalarProperty Name="STATE" ColumnName="STATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MOVEMENT">
+      <EntityTypeMapping TypeName="BancoPichinchaModel.MOVEMENT">
+        <MappingFragment StoreEntitySet="MOVEMENT">
+          <ScalarProperty Name="ID_MOVEMENT" ColumnName="ID_MOVEMENT" />
+          <ScalarProperty Name="ID_ACCOUNT" ColumnName="ID_ACCOUNT" />
+          <ScalarProperty Name="DATE" ColumnName="DATE" />
+          <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+          <ScalarProperty Name="VALUE" ColumnName="VALUE" />
+          <ScalarProperty Name="BALANCE" ColumnName="BALANCE" />
+          <ScalarProperty Name="INITIAL_BALANCE" ColumnName="INITIAL_BALANCE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PERSON">
+      <EntityTypeMapping TypeName="BancoPichinchaModel.PERSON">
+        <MappingFragment StoreEntitySet="PERSON">
+          <ScalarProperty Name="ID_PERSON" ColumnName="ID_PERSON" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="GENDER" ColumnName="GENDER" />
+          <ScalarProperty Name="AGE" ColumnName="AGE" />
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+          <ScalarProperty Name="ADDRESS" ColumnName="ADDRESS" />
+          <ScalarProperty Name="PHONE" ColumnName="PHONE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

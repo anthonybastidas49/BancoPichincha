@@ -1,0 +1,16 @@
+C:\Users\antho\source\repos\BancoPichincha\BLBancoPichincha\bin\Debug\BLBancoPichincha.dll
+C:\Users\antho\source\repos\BancoPichincha\BLBancoPichincha\bin\Debug\BLBancoPichincha.pdb
+C:\Users\antho\source\repos\BancoPichincha\BLBancoPichincha\bin\Debug\ALBancoPichincha.dll
+C:\Users\antho\source\repos\BancoPichincha\BLBancoPichincha\bin\Debug\ELBancoPichincha.dll
+C:\Users\antho\source\repos\BancoPichincha\BLBancoPichincha\bin\Debug\EntityFramework.dll
+C:\Users\antho\source\repos\BancoPichincha\BLBancoPichincha\bin\Debug\ALBancoPichincha.pdb
+C:\Users\antho\source\repos\BancoPichincha\BLBancoPichincha\bin\Debug\ALBancoPichincha.dll.config
+C:\Users\antho\source\repos\BancoPichincha\BLBancoPichincha\bin\Debug\ELBancoPichincha.pdb
+C:\Users\antho\source\repos\BancoPichincha\BLBancoPichincha\bin\Debug\ELBancoPichincha.dll.config
+C:\Users\antho\source\repos\BancoPichincha\BLBancoPichincha\bin\Debug\EntityFramework.xml
+C:\Users\antho\source\repos\BancoPichincha\BLBancoPichincha\obj\Debug\BLBancoPichincha.csproj.AssemblyReference.cache
+C:\Users\antho\source\repos\BancoPichincha\BLBancoPichincha\obj\Debug\BLBancoPichincha.csproj.CoreCompileInputs.cache
+C:\Users\antho\source\repos\BancoPichincha\BLBancoPichincha\obj\Debug\BLBancoPichincha.csproj.CopyComplete
+C:\Users\antho\source\repos\BancoPichincha\BLBancoPichincha\obj\Debug\BLBancoPichincha.dll
+C:\Users\antho\source\repos\BancoPichincha\BLBancoPichincha\obj\Debug\BLBancoPichincha.pdb
+C:\Users\antho\source\repos\BancoPichincha\BLBancoPichincha\bin\Debug\BLBancoPichincha.dll.config

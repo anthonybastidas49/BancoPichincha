@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a2ff6598317f4941ba42f9842b4ab2e6" Name="Diagram1">
+        <EntityTypeShape EntityType="BancoPichinchaModel.ACCOUNT" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="BancoPichinchaModel.CUSTOMER" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BancoPichinchaModel.MOVEMENT" Width="1.5" PointX="7.5" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="BancoPichinchaModel.PERSON" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="BancoPichinchaModel.FK_ACCOUNT_CUSTOMER__CUSTOMER" ManuallyRouted="false" />
+        <AssociationConnector Association="BancoPichinchaModel.FK_MOVEMENT_ACCOUNT_M_ACCOUNT" ManuallyRouted="false" />
+        <AssociationConnector Association="BancoPichinchaModel.FK_CUSTOMER_CLIENTE_P_PERSON" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

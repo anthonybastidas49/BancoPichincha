@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BancoPichinchaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ACCOUNT">
+    <Key>
+      <PropertyRef Name="ID_ACCOUNT" />
+    </Key>
+    <Property Name="ID_ACCOUNT" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ID_CUSTOMER" Type="Int32" Nullable="false" />
+    <Property Name="NUMBER" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TYPE" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="INITIAL_BALANCE" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="STATE" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="LIMIT" Type="Decimal" Precision="18" Scale="0" />
+    <NavigationProperty Name="CUSTOMER" Relationship="Self.FK_ACCOUNT_CUSTOMER__CUSTOMER" FromRole="ACCOUNT" ToRole="CUSTOMER" />
+    <NavigationProperty Name="MOVEMENT" Relationship="Self.FK_MOVEMENT_ACCOUNT_M_ACCOUNT" FromRole="ACCOUNT" ToRole="MOVEMENT" />
+  </EntityType>
+  <EntityType Name="CUSTOMER">
+    <Key>
+      <PropertyRef Name="ID_CUSTOMER" />
+    </Key>
+    <Property Name="ID_CUSTOMER" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ID_PERSON" Type="Int32" />
+    <Property Name="PASSWORD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STATE" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="ACCOUNT" Relationship="Self.FK_ACCOUNT_CUSTOMER__CUSTOMER" FromRole="CUSTOMER" ToRole="ACCOUNT" />
+    <NavigationProperty Name="PERSON" Relationship="Self.FK_CUSTOMER_CLIENTE_P_PERSON" FromRole="CUSTOMER" ToRole="PERSON" />
+  </EntityType>
+  <EntityType Name="MOVEMENT">
+    <Key>
+      <PropertyRef Name="ID_MOVEMENT" />
+    </Key>
+    <Property Name="ID_MOVEMENT" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ID_ACCOUNT" Type="Int32" Nullable="false" />
+    <Property Name="DATE" Type="Int32" />
+    <Property Name="TYPE" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="VALUE" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="BALANCE" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="INITIAL_BALANCE" Type="Decimal" Precision="18" Scale="0" />
+    <NavigationProperty Name="ACCOUNT" Relationship="Self.FK_MOVEMENT_ACCOUNT_M_ACCOUNT" FromRole="MOVEMENT" ToRole="ACCOUNT" />
+  </EntityType>
+  <EntityType Name="PERSON">
+    <Key>
+      <PropertyRef Name="ID_PERSON" />
+    </Key>
+    <Property Name="ID_PERSON" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="GENDER" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="AGE" Type="Int32" Nullable="false" />
+    <Property Name="DNI" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ADDRESS" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PHONE" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="CUSTOMER" Relationship="Self.FK_CUSTOMER_CLIENTE_P_PERSON" FromRole="PERSON" ToRole="CUSTOMER" />
+  </EntityType>
+  <Association Name="FK_ACCOUNT_CUSTOMER__CUSTOMER">
+    <End Role="CUSTOMER" Type="Self.CUSTOMER" Multiplicity="1" />
+    <End Role="ACCOUNT" Type="Self.ACCOUNT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CUSTOMER">
+        <PropertyRef Name="ID_CUSTOMER" />
+      </Principal>
+      <Dependent Role="ACCOUNT">
+        <PropertyRef Name="ID_CUSTOMER" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MOVEMENT_ACCOUNT_M_ACCOUNT">
+    <End Role="ACCOUNT" Type="Self.ACCOUNT" Multiplicity="1" />
+    <End Role="MOVEMENT" Type="Self.MOVEMENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ACCOUNT">
+        <PropertyRef Name="ID_ACCOUNT" />
+      </Principal>
+      <Dependent Role="MOVEMENT">
+        <PropertyRef Name="ID_ACCOUNT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CUSTOMER_CLIENTE_P_PERSON">
+    <End Role="PERSON" Type="Self.PERSON" Multiplicity="0..1" />
+    <End Role="CUSTOMER" Type="Self.CUSTOMER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PERSON">
+        <PropertyRef Name="ID_PERSON" />
+      </Principal>
+      <Dependent Role="CUSTOMER">
+        <PropertyRef Name="ID_PERSON" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="BancoPichinchaEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ACCOUNT" EntityType="Self.ACCOUNT" />
+    <EntitySet Name="CUSTOMER" EntityType="Self.CUSTOMER" />
+    <EntitySet Name="MOVEMENT" EntityType="Self.MOVEMENT" />
+    <EntitySet Name="PERSON" EntityType="Self.PERSON" />
+    <AssociationSet Name="FK_ACCOUNT_CUSTOMER__CUSTOMER" Association="Self.FK_ACCOUNT_CUSTOMER__CUSTOMER">
+      <End Role="CUSTOMER" EntitySet="CUSTOMER" />
+      <End Role="ACCOUNT" EntitySet="ACCOUNT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MOVEMENT_ACCOUNT_M_ACCOUNT" Association="Self.FK_MOVEMENT_ACCOUNT_M_ACCOUNT">
+      <End Role="ACCOUNT" EntitySet="ACCOUNT" />
+      <End Role="MOVEMENT" EntitySet="MOVEMENT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CUSTOMER_CLIENTE_P_PERSON" Association="Self.FK_CUSTOMER_CLIENTE_P_PERSON">
+      <End Role="PERSON" EntitySet="PERSON" />
+      <End Role="CUSTOMER" EntitySet="CUSTOMER" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

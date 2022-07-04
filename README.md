@@ -35,3 +35,24 @@ Funcionalidad de crear, actualizar, elminar, recuperar todas y por id.
 ![img](https://i.ibb.co/3CVYNzD/Eliminar-persona.png)
 ![img](https://i.ibb.co/dkHYxss/Persona-Por-ID.png)
 ![img](https://i.ibb.co/RgBnB5f/Todas-Personas.png)
+- CLIENTES
+Funcionalidad de crear, actualizar, elminar, recuperar todas y por id.
+![img](https://i.ibb.co/ZcdCCHJ/Crear-Cliente.png)
+![img](https://i.ibb.co/F861mN5/actualizar-cliente.png)
+![img](https://i.ibb.co/NrzP5mG/Eliminar-Cliente.png)
+![img](https://i.ibb.co/0J7HLRF/Obtener-cliente-id.png)
+![img](https://i.ibb.co/MBSJ78m/Todoslosclientes.png)
+- CUENTAS
+Funcionalidad de crear, actualizar, elminar, recuperar todas y por id.
+![img](https://i.ibb.co/dt5Lzht/Actualizar-Cuneta.png)
+![img](https://i.ibb.co/XF2BXDM/Crear-cuenta.png)
+![img](https://i.ibb.co/znwSzLz/Eliminar-cuenta.png)
+![img](https://i.ibb.co/XVnHqNX/Obtener-todas-las-cuentas.png)
+![img](https://i.ibb.co/Mg4DwfP/Obtner-cuenta-id.png)
+- Movimientos
+Movimientos, restriccion de sumas de movimientos diarios, restriccion de saldo y reporte.
+![img](https://i.ibb.co/hH3WLNr/Cupo-diario.png)
+![img](https://i.ibb.co/KwdRLPX/saldo-no-dispobible.png)
+![img](https://i.ibb.co/bPSd5yb/reporte.png)
+## Documentacion API
+![img](https://i.ibb.co/16P0yX5/Documentacion.png)

@@ -1,0 +1,441 @@
+{
+	"info": {
+		"_postman_id": "9810116d-639a-44ac-9ffa-3a289897c64e",
+		"name": "BPichincha",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19550788"
+	},
+	"item": [
+		{
+			"name": "Persona",
+			"item": [
+				{
+					"name": "Crear Persona",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_person\": 1,\r\n    \"age\": 21,\r\n    \"name\": \"Anthony Torres\",\r\n    \"gender\": \"M\",\r\n    \"dni\": 1723551055,\r\n    \"address\": \"Quito EC\",\r\n    \"phone\": \"0983303041\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44337/api/person",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44337",
+							"path": [
+								"api",
+								"person"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener todas las personas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44337/api/person",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44337",
+							"path": [
+								"api",
+								"person"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener persona por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44337/api/person/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44337",
+							"path": [
+								"api",
+								"person",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Persona",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_person\": 1,\r\n    \"age\": 41,\r\n    \"name\": \"Anthony Torres\",\r\n    \"gender\": \"M\",\r\n    \"dni\": 1723551055,\r\n    \"address\": \"Quito EC\",\r\n    \"phone\": \"0983303041\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44337/api/person",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44337",
+							"path": [
+								"api",
+								"person"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Borrar Persona",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44337/api/person/2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44337",
+							"path": [
+								"api",
+								"person",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Clientes",
+			"item": [
+				{
+					"name": "Actualizar Cliente",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_customer\": \"1\",\r\n    \"password\": \"127834\",\r\n    \"id_person\": 1,\r\n    \"state\": \"I\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44337/clientes",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44337",
+							"path": [
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Cliente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\": \"1234\",\r\n    \"id_person\": 3,\r\n    \"state\": \"A\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44337/clientes",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44337",
+							"path": [
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener todos los clientes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44337/clientes",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44337",
+							"path": [
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener cliente por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44337/clientes/2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44337",
+							"path": [
+								"clientes",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Borrar Cliente",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44337/clientes/2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44337",
+							"path": [
+								"clientes",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cuentas",
+			"item": [
+				{
+					"name": "Actualizar Cuenta",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_account\": \"3\",\r\n    \"id_customer\": 1,\r\n    \"initial_balance\": 20000.00,\r\n    \"number\": \"11111\",\r\n    \"type\": \"A\",\r\n    \"state\": \"A\",\r\n    \"limit\": 100.0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44337/cuentas",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44337",
+							"path": [
+								"cuentas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Cuenta",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_customer\": 3,\r\n    \"initial_balance\": 10000.00,\r\n    \"number\": \"11111\",\r\n    \"type\": \"A\",\r\n    \"state\": \"A\",\r\n    \"limit\": 200.0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44337/cuentas",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44337",
+							"path": [
+								"cuentas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener todos las cuentas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44337/cuentas",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44337",
+							"path": [
+								"cuentas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener cuentas por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44337/cuentas/2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44337",
+							"path": [
+								"cuentas",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Borrar Cuenta",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44337/cuentas/2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44337",
+							"path": [
+								"cuentas",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Movimientos",
+			"item": [
+				{
+					"name": "Generar Movimiento",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_account\": \"3\",\r\n    \"date\": 1656906688,\r\n    \"type\": \"D\",\r\n    \"value\": 1021\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44337/movimientos",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44337",
+							"path": [
+								"movimientos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reporte",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44337/movimientos?start=1656906680&end=1656906690&idAccount=3",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44337",
+							"path": [
+								"movimientos"
+							],
+							"query": [
+								{
+									"key": "start",
+									"value": "1656906680"
+								},
+								{
+									"key": "end",
+									"value": "1656906690"
+								},
+								{
+									"key": "idAccount",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
